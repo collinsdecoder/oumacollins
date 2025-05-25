@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollinsUserPortfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        label{
+            padding: 5px;
+            text-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        textarea{
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 10px;
+            align-items: start;
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            
+
+        }
+        input{
+            width: 95%;
+            padding:8px;
+            margin-top: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            scroll-behavior: smooth;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 10px;
+
+
+        }
+        form{
+            width: 89%;
+            padding: 20px;
+            background-color: grey;
+            border-radius: 9px;
+            box-shadow: 0 0 10px 10px gray;
+
+        }
+        strong{
+            font-size: 18px;
+
+        }
+
+        h3{
+            text-align: center;
+            font-weight: bolder;
+            color:gold;
+            box-shadow: 0 0 10px 10px teal;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background:linear-gradient(to right, teal, green,yellow,blue,orange,green,teal);
+            justify-content:center;
+            box-shadow: 0 0 10px 10px teal
+            
+
+        }
+        section{
+            flex: 1 1 30%;
+            min-width: min-content;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #310424;
+            
+            box-shadow: 0 5px 5px 10px orange;
+            
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            justify-self:center;
+            align-self: center;
+            margin-left: 25%;
+            
+        }
+        button:hover{
+            background-color: green;
+        }
+        footer{
+            width: 100%;
+            bottom: 0%;
+            position: relative;
+            text-align: center;
+            background-color: rgb(0,0,0,0.5);
+            padding: 3px;
+            font-weight: bolder;
+            box-shadow: 0 0 10px 10px gold;
+
+            
+        }
+        @media(max-width:768px){
+            body{
+                flex-direction: column;
+                align-items: center;
+                background:linear-gradient(to left,green,red);
+                
+            }
+        }
+        section{
+            width: 90%;
+        }
+        .hidden{
+            display: none;
+        }
+        .universityInformation,.primaryInformation,.highschoolInformation,.hobbies{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section class="universityInformation">
+        <h3>UNIVERSITY</h3>
+    </section>
+
+
+    <section class="highschoolInformation">
+        <h3>HIGH SCHOOL</h3>
+        <p>I joined <strong>Ndigwa Mixed Secondary School</strong> on<strong> 13/01/2020</strong>, where i started my educational journey.
+            I pushed through the challenges and finalized on <strong>24/11/2023</strong> after my final exams.
+            <br><br>
+            Here is a copy of my Secondary School Certificate.
+            <strong>click to download</strong>
+        </p>
+        <a href="">
+            <button onclick="alert('Document downloaded successfully!')" id="btn" type="button">DOWNLOAD</button>
+        </a>
+    </section>
+
+
+    <section class="primaryInformation">
+        <h3>PRIMARY SCHOOL</h3>
+        <p>I attended primary school from 2012 to 2019. I had a passion for Engineering and focused on my 
+            goals.I obtained my KCPE certificate.
+            <br><br>
+            Below is a copy of my KCPE certificate
+            <strong>click to download</strong>
+        </p>
+        <a href="Scanned_20250521_111108.pdf" download="Ouma_KCPE">
+            <button onclick="alert('Document downloaded successfully!')" id="btn" type="button">DOWNLOAD</button>
+        </a>
+    </section>
+
+
+    <section class="hobbies">
+        <h3>HOBBIES
+        </h3>
+            <ol>
+                <li>Watching car renovation videos</li>
+                <li>Watching industrial production videos</li>
+                <li>Watching Football</li>
+                <li>Coding and Programming</li>
+                <li>Watching Documentaries</li>
+            </ol>
+    </section>
+
+    <section style="padding: 20px;" class="form">
+
+        <form action="https://formsubmit.co/oumacollins002@gmail.com" method="post" id="contactForm" enctype="multipart/form-data">
+            <h3 style=" background-color:#310424;
+            padding:10px">CONTACT FORM</h3>
+
+            <p style="text-align: center;
+           "><strong> contact me here</strong></p>
+            <label for="name">Full names</label>
+
+            <input type="text" name="name" placeholder="eg. John Doe" id="name" required>
+            <br>
+
+            <label for="email">Email address</label>
+            <input type="email" name="email" placeholder="eg. johndoe@gmail.com"  id="email" required>
+
+            <textarea    name="message" rows="6" required placeholder="input your message here">
+            </textarea>
+            
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Form Submission with File">
+            <input type="hidden">
+            
+            <label for="file">Attach file/document if any (any format)</label>
+            <input type="file" style="width: 70%;
+            margin-left:15%;
+            padding:10px;" name="Attached file" >
+
+            <button type="submit">SEND</button>
+            <p id="msg" style="display: none; color:green;font-weight:bold;text-align:center" >Email submitted successfully to oumacollins002@gmail.com!</p>
+            <p style="display: none ;font-weight:bold; color:red;text-align:center" id="error">please provide your information in the text box above!</p>
+
+        </form>
+
+
+    </section>
+    <footer>
+        <p>Engineer Collins Ouma</p>
+    </footer>
+
+
+</body>
+</html>
+
+
+    <script>
+        const errorMsg=document.getElementById('error');
+        const form=document.getElementById('contactForm');
+        const message =document.getElementById('msg');
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+                message.style.display="block";
+                setTimeout(()=>{
+
+                },2000);
+            
+            form.submit(); 
+        });
+    
+
+       
+    </script>
