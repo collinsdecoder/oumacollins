@@ -13,39 +13,33 @@
         
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background: var(--primary);
+            background: linear-gradient(to right,black,grey,green,grey,black);
             color: var(--secondary);
             margin: 0;
-            padding: 0;
-            min-height: 100vh;
+            padding: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             line-height: 1.6;
+            flex-direction: column;
         }
         
         .thank-you-container {
             max-width: 600px;
             padding: 3rem;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            background: rgba(18,18,18,0.9);
+            border-width: -10px ;
+            box-shadow: 0 0 10px 10px gold;
+            background: #310424;
             position: relative;
             overflow: hidden;
+            border-radius: 50px;
+            max-height: 500px;
+            flex: 1 1 30%;
+            flex-wrap: wrap;
         }
         
-        .thank-you-container::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(230,57,70,0.1) 0%, rgba(0,0,0,0) 70%);
-            z-index: -1;
-            animation: pulse 15s infinite alternate;
-        }
+        
         
         h1 {
             font-size: 2.5rem;
@@ -69,7 +63,7 @@
         .cta-button {
             display: inline-block;
             padding: 1rem 2rem;
-            background: var(--accent);
+            background: #310424;
             color: white;
             text-decoration: none;
             font-weight: 600;
@@ -77,18 +71,20 @@
             text-transform: uppercase;
             font-size: 0.9rem;
             transition: all 0.3s ease;
-            border: 2px solid var(--accent);
+            border: 0;
+            box-shadow: 0 0 10px 10px black;
+            border-radius: 1rem;
         }
         
         .cta-button:hover {
-            background: transparent;
+            background: linear-gradient(to left,green,gold,#310424);
             color: var(--accent);
         }
         
         .details {
-            margin-top: 3rem;
+            margin-top: 10px;
             font-size: 0.9rem;
-            opacity: 0.7;
+            
         }
         
         @keyframes pulse {
@@ -100,25 +96,31 @@
             .thank-you-container {
                 padding: 2rem;
                 margin: 1rem;
+                flex-wrap: wrap;
+                min-height: 89%;
             }
             
             h1 {
                 font-size: 2rem;
+            }
+            body{
+                height: 100vh;
             }
         }
     </style>
 </head>
 <body>
     <div class="thank-you-container">
-        <div class="icon">✓</div>
+        <div class="icon">✔️</div>
         <h1>SUBMISSION CONFIRMED</h1>
         <p>Your message has been delivered directly to <strong> Collins Ouma</strong>.<br> The response will be immediate</p>
         
-        <a href="index.html" class="cta-button">RETURN HOME</a>
+        <a href="" class="cta-button">RETURN HOME</a>
         
         <div class="details">
             <p>For urgent matters:<br>
-            <strong>Whatsapp me on</strong> <a href="+254746001286">+254746001286</a></p>
+            <strong>Whatsapp me on</strong> <a href="tel:+254746001286">+254746001286</a>
+        <br> <strong>email address</strong> <a href="mail to:oumacollins002@gmail.com">oumacollins002@gmail.com</a></p>
         </div>
     </div>
 </body>
